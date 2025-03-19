@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dados</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div class="container">
+    <div class="prizes-grid">
+        <div class="prizes-column">
+            <div class="prizes-table">
+                <h3>Tabla de Premios</h3>
+                <table>
+                    <tr>
+                        <td>1 + 1</td>
+                        <td>20,000 oro</td>
+                    </tr>
+                    <tr>
+                        <td>2 + 2</td>
+                        <td>40,000 oro</td>
+                    </tr>
+                    <tr>
+                        <td>3 + 3</td>
+                        <td>60,000 oro</td>
+                    </tr>
+                    <tr>
+                        <td>4 + 4</td>
+                        <td>80,000 oro</td>
+                    </tr>
+                    <tr>
+                        <td>5 + 5</td>
+                        <td>100,000 oro</td>
+                    </tr>
+                    <tr>
+                        <td>6 + 6</td>
+                        <td>120,000 oro</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="rest-column">
+            <div class="remaining-rolls-table">
+                <h3>Tiradas Restantes</h3>
+                <table>
+                    <tr>
+                        <td id="remaining-rolls">Restantes: 4</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <div class="ui-controls">
+        <div class="score">Score: <span id="score-result"></span></div>
+        <button id="roll-btn">throw the dice</button>
+    </div>
+</div>
+
+<script async src="./es-module-shims.js"></script>
+<script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.151.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.151.0/examples/jsm/"
+    }
+  }
+</script>
+<script type="module" src="./script.js"></script>
+</body>
+</html>

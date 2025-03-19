@@ -1,0 +1,172 @@
+body{
+    background-color: rgba(102, 51, 153, 0);
+}
+
+.container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    flex: 1;
+    color: #444444;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    font-family: sans-serif;
+    padding-top: 40px;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.ui-controls {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    user-select: none;
+    line-height: 1.5;
+    padding: 10px;
+    z-index: 2;
+    display:none;
+}
+
+.ui-controls .score {
+    margin-left: .25em;
+}
+
+.ui-controls #score-result {
+    display: inline-block;
+    min-width: 1.8em;
+}
+.rest-column{
+    margin-top: 136px;
+}
+
+.ui-controls #roll-btn {
+    background-color: #4BC0C8;
+    font-weight: bold;
+    border: none;
+    padding: .5em 1em;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    margin: 1em 0 0 0;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.ui-controls #roll-btn:active {
+    transform: translateY(4px);
+}
+
+.prizes-table {
+    margin: 0;
+    background: rgba(30, 30, 30, 0.9);
+    padding: 0.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    margin-top: 134px;
+}
+
+.prizes-table h3 {
+    margin: 0 0 0.5em 0;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+}
+
+.prizes-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.prizes-column {
+    flex: 1;
+    min-width: 0;
+    max-width: 300px;
+}
+
+.prizes-column table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    table-layout: fixed;
+}
+
+.prizes-column th,
+.prizes-column td {
+    padding: 0.3em;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    color: #fff;
+    width: 50%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.prizes-column th {
+    background-color: #2a2a2a;
+    color: #4BC0C8;
+    font-size: 0.9em;
+}
+
+.prizes-column tr:hover {
+    background-color: rgba(75, 192, 200, 0.1);
+}
+
+.prizes-column tr.winner {
+    background-color: #4BC0C8;
+    color: #000;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #4BC0C8;
+    }
+    50% {
+        background-color: #3a8f96;
+    }
+    100% {
+        background-color: #4BC0C8;
+    }
+}
+
+.remaining-rolls-table {
+    margin-left: 20px; /* Espacio entre las tablas */
+    background: rgba(30, 30, 30, 0.9);
+    padding: 0.5em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.remaining-rolls-table h3 {
+    margin: 0 0 0.5em 0;
+    color: #fff;
+    font-size: 1em;
+    text-align: center;
+}
+
+.remaining-rolls-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+.remaining-rolls-table td {
+    padding: 0.3em;
+    text-align: center;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
